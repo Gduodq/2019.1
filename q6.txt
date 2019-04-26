@@ -1,0 +1,5 @@
+6.  Primeiro printf(): Os valores do contador de 0 a 4;
+     Segundo printf(): Os valores do vetor em todas as suas posições (ordem crescente);
+     Terceiro  printf(): Os mesmos valores acima, mas agora acessados pelo ponteiro;
+     Quarto printf(): Endereços de memória de cada posição do vetor;
+     Quinto printf(): Os mesmos valores acima, mas acessados por ponteiros.

@@ -1,0 +1,2 @@
+9. Primeiro programa percorre o vetor mostrando os seus elementos;
+    Segundo programa percorre o vetor mostrando os endereços de memória utilizados por ele;

@@ -1,0 +1,35 @@
+15.
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare (const void * a, const void * b) //Funçao para comparar valores no qsort
+{
+  return ( *(int*)a - *(int*)b );
+}
+
+int main()
+{
+    int *v; 
+    int n,i,j;
+    float a;
+
+    printf("Insira a quantidade de elementos\n");
+    scanf ("%d", &n);  //Tamanho do vetor de elementos
+
+    v = malloc (n * sizeof (float)); //Declaração do vetor alocado dinamicamente
+
+    for(i = 0; i < n; ++i){  //Inserção dos valores do vetor
+        printf("%d. ", i+1);
+        scanf ("%d", &v[i]);
+    }
+
+    qsort(v,n,sizeof(float),compare); //Funçao qsort()
+
+    for(i = 0; i < n; ++i){  //Print dos valores depois da ordenção
+        printf("%d ", v[i]);
+    }
+
+    free(v);  //Liberação da memória alocada
+
+    return 0;
+}

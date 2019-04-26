@@ -1,0 +1,17 @@
+13. Um ponteiro é um valor que relaciona um endereço de memória de uma variável no sistema.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int z = 9;
+    int *y;
+
+    y = &z;
+
+    printf("O endereco eh: %d \n", y);
+    printf("O valor eh: %d", *y);
+
+    return 0;
+}

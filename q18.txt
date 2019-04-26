@@ -1,0 +1,28 @@
+18.
+
+void soma_vetor(int x[], int y[], int z[], int tamx, int tamy, int tamz){
+
+    int i;
+    if(tamx>tamz){
+        for(i=0;i<tamz;i++){
+            *(z+i) = x[i];
+        }
+    }
+    else{
+        for(i=0;i<tamx;i++){
+            *(z+i) = x[i];
+        }
+    }
+
+    if(tamy>tamz){
+        for(i=0;i<tamz;i++){
+            *(z+i) = *(z+i) + y[i];
+        }
+    }
+    else{
+        for(i=0;i<tamy;i++){
+            *(z+i) = *(z+i) + y[i];
+        }
+    }
+
+}

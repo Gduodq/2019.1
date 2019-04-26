@@ -1,0 +1,38 @@
+14.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *v;
+    int n,i,j;
+    float a;
+
+    printf("Insira a quantidade de elementos\n");
+    scanf ("%d", &n);
+
+    v = malloc (n * sizeof (float));
+
+    for(i = 0; i < n; ++i){
+        printf("%d. ", i+1);
+        scanf ("%d", &v[i]);
+    }
+
+    for(i=n-1;i>=0;i--){
+        for(j=0;j<i;j++){
+            if(v[j]>v[j+1]){
+                a = v[j+1];
+                v[j+1] = v[j];
+                v[j] = a;
+            }
+        }
+    }
+
+    for(i = 0; i < n; ++i){
+        printf("%d ", v[i]);
+    }
+
+    free(v);
+
+    return 0;
+}
